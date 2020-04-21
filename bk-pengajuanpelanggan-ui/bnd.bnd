@@ -1,0 +1,4 @@
+Bundle-Name: bk-pengajuanpelanggan-ui
+Bundle-SymbolicName: bk.pengajuanpelanggan.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.pengajuanpelanggan.ui.constants

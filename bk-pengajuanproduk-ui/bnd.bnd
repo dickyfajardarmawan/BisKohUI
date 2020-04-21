@@ -1,0 +1,4 @@
+Bundle-Name: bk-pengajuanproduk-ui
+Bundle-SymbolicName: bk.pengajuanproduk.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.pengajuanproduk.ui.constants

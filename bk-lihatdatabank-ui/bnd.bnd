@@ -1,0 +1,4 @@
+Bundle-Name: bk-lihatdatabank-ui
+Bundle-SymbolicName: bk.lihatdatabank.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.lihatdatabank.ui.constants

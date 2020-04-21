@@ -1,0 +1,4 @@
+Bundle-Name: bk-tambahpelanggan-ui
+Bundle-SymbolicName: bk.tambahpelanggan.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.tambahpelanggan.ui.constants

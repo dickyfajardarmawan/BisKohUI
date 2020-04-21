@@ -1,0 +1,4 @@
+Bundle-Name: bk-akun-ui
+Bundle-SymbolicName: bk.akun.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.akun.ui.constants

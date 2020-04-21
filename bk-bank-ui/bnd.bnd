@@ -1,0 +1,4 @@
+Bundle-Name: bk-bank-ui
+Bundle-SymbolicName: bk.bank.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.bank.ui.constants

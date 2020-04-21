@@ -1,0 +1,4 @@
+Bundle-Name: bk-listpengguna-ui
+Bundle-SymbolicName: bk.listpengguna.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.listpengguna.ui.constants

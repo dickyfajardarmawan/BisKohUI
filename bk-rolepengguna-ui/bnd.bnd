@@ -1,0 +1,4 @@
+Bundle-Name: bk-rolepengguna-ui
+Bundle-SymbolicName: bk.rolepengguna.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.rolepengguna.ui.constants

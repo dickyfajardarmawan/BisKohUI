@@ -1,0 +1,4 @@
+Bundle-Name: bk-listproduk-ui
+Bundle-SymbolicName: bk.listproduk.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.listproduk.ui.constants
