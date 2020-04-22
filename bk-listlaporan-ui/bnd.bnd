@@ -1,0 +1,4 @@
+Bundle-Name: bk-listlaporan-ui
+Bundle-SymbolicName: bk.listlaporan.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.listlaporan.ui.constants
