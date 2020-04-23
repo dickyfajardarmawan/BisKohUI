@@ -1,0 +1,4 @@
+Bundle-Name: bk-tambahowner-ui
+Bundle-SymbolicName: bk.tambahowner.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.tambahowner.ui.constants

@@ -1,0 +1,4 @@
+Bundle-Name: bk-listowner-ui
+Bundle-SymbolicName: bk.listowner.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.listowner.ui.constants

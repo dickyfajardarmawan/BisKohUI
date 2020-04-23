@@ -1,0 +1,4 @@
+Bundle-Name: bk-permintaanbank-ui
+Bundle-SymbolicName: bk.permintaanbank.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.permintaanbank.ui.constants

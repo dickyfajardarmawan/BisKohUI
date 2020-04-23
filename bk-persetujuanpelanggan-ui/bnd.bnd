@@ -1,0 +1,4 @@
+Bundle-Name: bk-persetujuanpelanggan-ui
+Bundle-SymbolicName: bk.persetujuanpelanggan.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.persetujuanpelanggan.ui.constants
