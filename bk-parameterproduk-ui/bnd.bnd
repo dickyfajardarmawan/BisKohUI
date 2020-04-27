@@ -1,0 +1,4 @@
+Bundle-Name: bk-parameterproduk-ui
+Bundle-SymbolicName: bk.parameterproduk.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.parameterproduk.ui.constants
