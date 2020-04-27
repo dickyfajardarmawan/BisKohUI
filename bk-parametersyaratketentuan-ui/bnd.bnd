@@ -1,0 +1,4 @@
+Bundle-Name: bk-parametersyaratketentuan-ui
+Bundle-SymbolicName: bk.parametersyaratketentuan.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.parametersyaratketentuan.ui.constants

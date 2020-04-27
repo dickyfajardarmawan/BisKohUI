@@ -16,7 +16,7 @@
 		<div style="background-color: #830000; color: #fff"
 			class="card-header">
 			<h4 class="m-0">
-				<i class="fa fa-th-list"></i> Lihat Data Bank
+				<i class="fa fa-th-list"></i> List Laporan
 			</h4>
 		</div>
 		<div class="card-body">

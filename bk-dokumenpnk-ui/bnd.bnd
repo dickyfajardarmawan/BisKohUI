@@ -1,0 +1,4 @@
+Bundle-Name: bk-dokumenpnk-ui
+Bundle-SymbolicName: bk.dokumenpnk.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.dokumenpnk.ui.constants

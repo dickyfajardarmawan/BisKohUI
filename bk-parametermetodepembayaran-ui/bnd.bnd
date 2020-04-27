@@ -1,0 +1,4 @@
+Bundle-Name: bk-parametermetodepembayaran-ui
+Bundle-SymbolicName: bk.parametermetodepembayaran.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.parametermetodepembayaran.ui.constants

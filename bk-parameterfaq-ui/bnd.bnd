@@ -1,0 +1,4 @@
+Bundle-Name: bk-parameterfaq-ui
+Bundle-SymbolicName: bk.parameterfaq.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.parameterfaq.ui.constants

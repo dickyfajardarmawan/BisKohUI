@@ -45,7 +45,7 @@
         </div>
         <div id="UoM" class="w3-container w3-border city">
             <div class="text-right my-3">
-                <button onclick="document.getElementById('id03').style.display='block'" type="button" class="w3-button w3-hover-red w3-flat-pomegranate"><i class="fa fa-plus"></i> Tambah</button>
+                <button onclick="tambahUoM()" type="button" class="w3-button w3-hover-red w3-flat-pomegranate"><i class="fa fa-plus"></i> Tambah</button>
             </div>
             <table class="w3-table-all mb-3">
                 <thead>
@@ -55,12 +55,20 @@
                         <th colspan="2">Aksi</th>
                     </tr>
                 </thead>
-                <tr>
-                    <td>KG</td>
-                    <td>Aktif</td>
-                    <td><a onclick="document.getElementById('id01').style.display='block'" type="button" href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Ubah"><i class="fa fa-cog"></i></a></td>
-                    <td><a onclick="document.getElementById('id02').style.display='block'" type="button" href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Hapus"><i class="fa fa-trash"></i></a></td>
-                </tr>
+                <tbody id="tableUoM">
+	                <tr>
+	                    <td><input type="text" class="form-control"></td>
+	                    <td><input type="text" class="form-control"></td>
+	                    <td><a onclick="document.getElementById('id01').style.display='block'" type="button" href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Ubah"><i class="fa fa-cog"></i></a></td>
+	                    <td><a onclick="document.getElementById('id02').style.display='block'" type="button" href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Hapus"><i class="fa fa-trash"></i></a></td>
+	                </tr>
+	                <tr>
+	                    <td>KG</td>
+	                    <td>Aktif</td>
+	                    <td><a onclick="document.getElementById('id01').style.display='block'" type="button" href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Ubah"><i class="fa fa-cog"></i></a></td>
+	                    <td><a onclick="document.getElementById('id02').style.display='block'" type="button" href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Hapus"><i class="fa fa-trash"></i></a></td>
+	                </tr>
+                </tbody>
             </table>
         </div>
 
@@ -312,5 +320,32 @@
             }
             document.getElementById(cityName).style.display = "block";
             evt.currentTarget.className += " w3-flat-alizarin";
+        }
+        
+        var dataTableUoM = `
+        	<tr>
+	            <td>KG</td>
+	            <td>Aktif</td>
+	            <td><a onclick="document.getElementById('id01').style.display='block'" type="button" href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Ubah"><i class="fa fa-cog"></i></a></td>
+	            <td><a onclick="document.getElementById('id02').style.display='block'" type="button" href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Hapus"><i class="fa fa-trash"></i></a></td>
+        	</tr>
+        `;
+        
+        
+        
+        document.getElementById('tableUoM').innerHTML = dataTableUoM;
+        
+        function tambahUoM() {
+        	var tambahTable = `
+        		<tr>
+	                <td><input type="text" class="form-control"></td>
+	                <td><input type="text" class="form-control"></td>
+	                <td><a onclick="document.getElementById('id01').style.display='block'" type="button" href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Ubah"><i class="fa fa-cog"></i></a></td>
+	                <td><a onclick="document.getElementById('id02').style.display='block'" type="button" href="javascript:void(0)" data-toggle="tooltip" data-placement="top" title="Hapus"><i class="fa fa-trash"></i></a></td>
+	            </tr>
+        	`;
+        	dataTableUoM = tambahTable + dataTableUoM;
+        	
+        	document.getElementById('tableUoM').innerHTML = dataTableUoM;
         }
     </script>

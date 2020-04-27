@@ -1,0 +1,4 @@
+Bundle-Name: bk-parameterlayananpelanggan-ui
+Bundle-SymbolicName: bk.parameterlayananpelanggan.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.parameterlayananpelanggan.ui.constants

@@ -1,0 +1,4 @@
+Bundle-Name: bk-parameterlokasi-ui
+Bundle-SymbolicName: bk.parameterlokasi.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.parameterlokasi.ui.constants
