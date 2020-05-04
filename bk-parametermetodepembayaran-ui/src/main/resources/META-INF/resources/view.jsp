@@ -1,5 +1,8 @@
 <%@ include file="/init.jsp"%>
 
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
 <style>
 .w3-modal {
 	padding-top: 40px;
@@ -69,10 +72,10 @@
 					<tr>
 						<td>Tunai</td>
 						<td>Tidak Aktif</td>
-						<td><a href="javascript:void(0)" onclick="document.getElementById('id01').style.display='block'" data-toggle="tooltip" data-placement="top" title="Lihat Produk"><i class="fa fa-eye"></i></a></td>
-						<td><a href="javascript:void(0)" onclick="document.getElementById('id02').style.display='block'" data-toggle="tooltip" data-placement="top" title="Ubah Produk"><i class="fa fa-pencil-square-o"></i></a></td>
-						<td><a href="javascript:void(0)" onclick="document.getElementById('id03').style.display='block'" data-toggle="tooltip" data-placement="top" title="Perizinan Produk"><i class="fa fa-list-alt"></i></a></td>
-						<td><a href="javascript:void(0)" onclick="document.getElementById('id04').style.display='block'" data-toggle="tooltip" data-placement="top" title="Hapus Produk"><i class="fa fa-trash-o"></i></a></td>
+						<td><a href="javascript:void(0)" onclick="document.getElementById('id01').style.display='none'" data-toggle="tooltip" data-placement="top" title="Lihat Metode Pembayaran"><i class="fa fa-eye"></i></a></td>
+						<td><a href="javascript:void(0)" onclick="document.getElementById('id02').style.display='block'" data-toggle="tooltip" data-placement="top" title="Ubah Metode Pembayaran"><i class="fa fa-cog"></i></a></td>
+						<td><a href="javascript:void(0)" onclick="document.getElementById('id03').style.display='none'" data-toggle="tooltip" data-placement="top" title="Perizinan Metode Pembayaran"><i class="fa fa-list-alt"></i></a></td>
+						<td><a href="javascript:void(0)" onclick="document.getElementById('id04').style.display='block'" data-toggle="tooltip" data-placement="top" title="Hapus Metode Pembayaran"><i class="fa fa-trash-o"></i></a></td>
 					</tr>
 				</tbody>
 			</table>
@@ -99,20 +102,20 @@
 		<header class="w3-container mb-3 w3-flat-pomegranate">
 			<span onclick="document.getElementById('id01').style.display='none'"
 				class="w3-button w3-display-topright">&times;</span>
-			<h3>Lihat Produk</h3>
+			<h3>Lihat Metode Pembayaran</h3>
 		</header>
 		<div class="w3-container pb-3">
 			<form>
 					<div class="form-group row">
 						<label for="staticEmail" class="col-sm-2 col-form-label">Nama
-							Produk</label>
+							Metode Pembayaran</label>
 						<div class="col-sm-10">
 							<input type="text" class="form-control" disabled>
 						</div>
 					</div>
 					<div class="form-group row">
 						<label for="staticEmail" class="col-sm-2 col-form-label">Satuan
-							Produk</label>
+							Metode Pembayaran</label>
 						<div class="col-sm-10">
 							<select name="" id="" class="form-control" disabled>
 								<option value="">Satuan</option>
@@ -138,14 +141,14 @@
 					</div>
 					<div class="form-group row">
 						<label for="staticEmail" class="col-sm-2 col-form-label">Kategori
-							Produk</label>
+							Metode Pembayaran</label>
 						<div class="col-sm-10">
 							<input type="text" class="form-control" disabled>
 						</div>
 					</div>
 					<div class="form-group row">
 						<label for="staticEmail" class="col-sm-2 col-form-label">Brand
-							Produk</label>
+							Metode Pembayaran</label>
 						<div class="col-sm-10">
 							<input type="text" class="form-control" disabled>
 						</div>
@@ -177,88 +180,42 @@
 		<header class="w3-container mb-3 w3-flat-pomegranate">
 			<span onclick="document.getElementById('id02').style.display='none'"
 				class="w3-button w3-display-topright">&times;</span>
-			<h3>Ubah Produk</h3>
+			<h3>Perizinan Tunai</h3>
 		</header>
 		<div class="w3-container pb-3">
 			<form>
 					<div class="form-group row">
 						<label for="staticEmail" class="col-sm-2 col-form-label">Nama
-							Produk</label>
+							Metode</label>
 						<div class="col-sm-10">
 							<input type="text" class="form-control" required>
 						</div>
 					</div>
 					<div class="form-group row">
-						<label for="staticEmail" class="col-sm-2 col-form-label">Satuan
-							Produk</label>
-						<div class="col-sm-10">
+						<label for="staticEmail" class="col-sm-2 col-form-label">Pilih Perizinan</label>
+						<div class="col-sm-5">
 							<select name="" id="" class="form-control">
-								<option value="">Satuan</option>
-								<option value="">Lusinan</option>
-								<option value="">Sak</option>
-								<option value="">Truk</option>
+								<option value="">Semua</option>
+								<option value="">Regional</option>
+								<option value="">Provinsi</option>
+								<option value="">Area</option>
+								<option value="">Kota</option>
+								<option value="">Kecamatan</option>
+								<option value="">Kelurahan</option>
+								<option value="">ID BK</option>
+							</select>
+						</div>
+						<div class="col-sm-5">
+							<select name="" id="" class="form-control selectpicker" multiple data-live-search="true">
+								<option value="">Regional 1</option>
+								<option value="">Regional 2</option>
 							</select>
 						</div>
 					</div>
-					<div class="form-group row">
-						<label for="staticEmail" class="col-sm-2 col-form-label">Unit
-							Penjualan</label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" required>
-						</div>
+					<div class="text-right mb-4">
+						<button class="btn btn-danger">Tambah</button>
 					</div>
-					<div class="form-group row">
-						<label for="staticEmail" class="col-sm-2 col-form-label">Unit
-							Pembelian</label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" required>
-						</div>
-					</div>
-					<div class="form-group row">
-						<label for="staticEmail" class="col-sm-2 col-form-label">Kategori
-							Produk</label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" required>
-						</div>
-					</div>
-					<div class="form-group row">
-						<label for="staticEmail" class="col-sm-2 col-form-label">Brand
-							Produk</label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" required>
-						</div>
-					</div>
-					<div class="form-group row">
-						<label for="staticEmail" class="col-sm-2 col-form-label">Suplier</label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" required>
-						</div>
-					</div>
-					<div class="form-group row">
-						<label for="staticEmail" class="col-sm-2 col-form-label">Harga
-							Suplier</label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" required>
-						</div>
-					</div>
-					<div class="form-group row">
-						<label for="staticEmail" class="col-sm-2 col-form-label">Unggah
-							Foto Produk</label>
-						<div class="col-sm-10">
-							<div class="custom-file">
-								<input type="file" class="custom-file-input"
-									id="validatedCustomFile" required> <label
-									class="custom-file-label" for="validatedCustomFile">Choose
-									file...</label>
-								<div class="invalid-feedback">Example invalid custom file
-									feedback</div>
-							</div>
-						</div>
-					</div>
-					<div class="text-right">
-						<img src="https://pngimage.net/wp-content/uploads/2018/06/img-icon-png-3.png">
-					</div>
-					<div class="text-right mt-4">
+					<div class="text-right mt-5">
 						<button class="btn btn-danger">Simpan</button>
 					</div>
 				</form>
@@ -272,19 +229,19 @@
 		<header class="w3-container mb-3 w3-flat-pomegranate">
 			<span onclick="document.getElementById('id03').style.display='none'"
 				class="w3-button w3-display-topright">&times;</span>
-			<h3>Perizinan produk</h3>
+			<h3>Perizinan Metode Pembayaran</h3>
 		</header>
 		<div class="w3-container pb-3">
 			<form>
 					<div class="form-group row">
 						<label for="staticEmail" class="col-sm-2 col-form-label">Kode
-							Produk</label>
+							Metode Pembayaran</label>
 						<div class="col-sm-10">
 							<input type="text" class="form-control" required>
 						</div>
 					</div>
 					<div class="form-group row">
-						<label for="staticEmail" class="col-sm-2 col-form-label">Nama Produk</label>
+						<label for="staticEmail" class="col-sm-2 col-form-label">Nama Metode Pembayaran</label>
 						<div class="col-sm-10">
 							<input type="text" class="form-control" required>
 						</div>
@@ -306,7 +263,7 @@
 							</select>
 						</div>
 						<div class="col-sm-4">
-							<select name="" id="" class="form-control" required>
+							<select name="" id="" class="form-control selectpicker" multiple data-live-search="true" required>
 								<option value="">Semua</option>
 								<option value="">Regional</option>
 								<option value="">Provinsi</option>
@@ -340,12 +297,12 @@
 		<header class="w3-container mb-3 w3-flat-pomegranate">
 			<span onclick="document.getElementById('id04').style.display='none'"
 				class="w3-button w3-display-topright">&times;</span>
-			<h3>Hapus Produk</h3>
+			<h3>Hapus Metode Pembayaran</h3>
 		</header>
 		<div class="w3-container pb-3">
 			<div class="text-center">
 				<p>Apakah anda yakin ingin
-				menghapus Produk ini ?</p>
+				menghapus Metode Pembayaran ini ?</p>
 			</div>
 			<div class="text-right">
 				<button type="button" class="btn btn-secondary" onclick="document.getElementById('id04').style.display='none'">Tidak</button>
@@ -408,6 +365,9 @@
 		</div>
 	</div>
 </div>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
 
 <script>
 //Get the modal
