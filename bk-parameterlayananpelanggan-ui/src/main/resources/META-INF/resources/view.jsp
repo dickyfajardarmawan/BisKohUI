@@ -14,7 +14,10 @@
             content: "Unggah";
         }
 </style>
-
+ 
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+ 
 <div class="container my-3">
 	<div class="card">
 		<div style="background-color: #830000; color: #fff"
@@ -61,7 +64,12 @@
 				<tbody>
 					<tr>
 						<th scope="row">Akun 1</th>
-						<td>Distributor</td>
+						<td><select name="" id="" class="form-control selectpicker" multiple title="pilih Entitas" data-live-search="true">
+								<option value="">Semua</option>
+								<option value="">Distributor</option>
+								<option value="">Toko</option>
+								<option value="">Large Toko</option>
+							</select></td>
 						<td>Aktif</td>
 						<td><a href="javascript:void(0)" onclick="document.getElementById('id02').style.display='block'" data-toggle="tooltip" data-placement="top" title="Atur Layanan Pelanggan"><i class="fa fa-cog"></i></a></td>
 						<td><a href="javascript:void(0)" onclick="document.getElementById('id03').style.display='block'" data-toggle="tooltip" data-placement="top" title="Hapus Layanan Pelanggan"><i class="fa fa-trash"></i></a></td>
@@ -105,6 +113,8 @@
 	</div>
 </div>
 
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
 
 
 <script>
