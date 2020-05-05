@@ -11,6 +11,9 @@
 }
 </style>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+
 <script src="https://cdn.ckeditor.com/4.14.0/standard-all/ckeditor.js"></script>
 
 <div class="container my-3">
@@ -152,7 +155,7 @@
 					<div class="form-group row">
 						<label for="staticEmail" class="col-sm-2 col-form-label">Konten FAQ</label>
 						<div class="col-sm-10">
-							<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample-short></textarea>
+							<textarea cols="80" id="editor0" name="editor0" class="editor" rows="10" data-sample-short></textarea>
 						</div>
 					</div>
 					<div class="text-right mb-3">
@@ -161,7 +164,7 @@
 					<div class="form-group row">
 						<label for="staticEmail" class="col-sm-2 col-form-label">Pilih Entitas</label>
 						<div class="col-sm-10">
-							<select name="" id="" class="form-control">
+							<select name="" id="" class="form-control selectpicker" multiple data-live-search="true">
 								<option value="">Pilih Entitas</option>
 								<option value="">Semua</option>
 								<option value="">Distributor</option>
@@ -221,7 +224,7 @@
 					<div class="form-group row">
 						<label for="staticEmail" class="col-sm-2 col-form-label">Konten FAQ</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" required>
+							<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample-short></textarea>
 						</div>
 					</div>
 					<div class="text-right mb-3">
@@ -230,7 +233,7 @@
 					<div class="form-group row">
 						<label for="staticEmail" class="col-sm-2 col-form-label">Pilih Entitas</label>
 						<div class="col-sm-10">
-							<select name="" id="" class="form-control">
+							<select name="" id="" class="form-control selectpicker" multiple data-live-search="true">
 								<option value="">Pilih Entitas</option>
 								<option value="">Semua</option>
 								<option value="">Distributor</option>
@@ -240,7 +243,7 @@
 						</div>
 					</div>
 					<div class="text-right">
-						<button type="submit" class="btn btn-danger">Terima</button>
+						<button type="submit" class="btn btn-danger">Simpan</button>
 					</div>
 				</form>
 		</div>
@@ -255,81 +258,87 @@
       'figure[class*=easyimage-gradient] figcaption { position: relative; z-index: 2; }' +
       '.easyimage-gradient-1::before { background-image: linear-gradient( 135deg, rgba( 115, 110, 254, 0 ) 0%, rgba( 66, 174, 234, .72 ) 100% ); }' +
       '.easyimage-gradient-2::before { background-image: linear-gradient( 135deg, rgba( 115, 110, 254, 0 ) 0%, rgba( 228, 66, 234, .72 ) 100% ); }');
-
-    CKEDITOR.replace('editor1', {
-      extraPlugins: 'easyimage',
-      removePlugins: 'image',
-      removeDialogTabs: 'link:advanced',
-      toolbar: [{
-          name: 'document',
-          items: ['Undo', 'Redo']
-        },
-        {
-          name: 'styles',
-          items: ['Format']
-        },
-        {
-          name: 'basicstyles',
-          items: ['Bold', 'Italic', 'Strike', '-', 'RemoveFormat']
-        },
-        {
-          name: 'paragraph',
-          items: ['NumberedList', 'BulletedList']
-        },
-        {
-          name: 'links',
-          items: ['Link', 'Unlink']
-        },
-        {
-          name: 'insert',
-          items: ['EasyImageUpload']
-        }
-      ],
-      height: 630,
-      cloudServices_uploadUrl: 'https://33333.cke-cs.com/easyimage/upload/',
-      // Note: this is a token endpoint to be used for CKEditor 4 samples only. Images uploaded using this token may be deleted automatically at any moment.
-      // To create your own token URL please visit https://ckeditor.com/ckeditor-cloud-services/.
-      cloudServices_tokenUrl: 'https://33333.cke-cs.com/token/dev/ijrDsqFix838Gh3wGO3F77FSW94BwcLXprJ4APSp3XQ26xsUHTi0jcb1hoBt',
-      easyimage_styles: {
-        gradient1: {
-          group: 'easyimage-gradients',
-          attributes: {
-            'class': 'easyimage-gradient-1'
-          },
-          label: 'Blue Gradient',
-          icon: 'https://ckeditor.com/docs/ckeditor4/4.14.0/examples/assets/easyimage/icons/gradient1.png',
-          iconHiDpi: 'https://ckeditor.com/docs/ckeditor4/4.14.0/examples/assets/easyimage/icons/hidpi/gradient1.png'
-        },
-        gradient2: {
-          group: 'easyimage-gradients',
-          attributes: {
-            'class': 'easyimage-gradient-2'
-          },
-          label: 'Pink Gradient',
-          icon: 'https://ckeditor.com/docs/ckeditor4/4.14.0/examples/assets/easyimage/icons/gradient2.png',
-          iconHiDpi: 'https://ckeditor.com/docs/ckeditor4/4.14.0/examples/assets/easyimage/icons/hidpi/gradient2.png'
-        },
-        noGradient: {
-          group: 'easyimage-gradients',
-          attributes: {
-            'class': 'easyimage-no-gradient'
-          },
-          label: 'No Gradient',
-          icon: 'https://ckeditor.com/docs/ckeditor4/4.14.0/examples/assets/easyimage/icons/nogradient.png',
-          iconHiDpi: 'https://ckeditor.com/docs/ckeditor4/4.14.0/examples/assets/easyimage/icons/hidpi/nogradient.png'
-        }
-      },
-      easyimage_toolbar: [
-        'EasyImageFull',
-        'EasyImageSide',
-        'EasyImageGradient1',
-        'EasyImageGradient2',
-        'EasyImageNoGradient',
-        'EasyImageAlt'
-      ]
-    });
+    
+    ckedit(0);
+    ckedit(1);
+    
+    function ckedit(i) {
+    	CKEDITOR.replace('editor'+i, {
+            extraPlugins: 'easyimage',
+            removePlugins: 'image',
+            removeDialogTabs: 'link:advanced',
+            toolbar: [{
+                name: 'document',
+                items: ['Undo', 'Redo']
+              },
+              {
+                name: 'styles',
+                items: ['Format']
+              },
+              {
+                name: 'basicstyles',
+                items: ['Bold', 'Italic', 'Strike', '-', 'RemoveFormat']
+              },
+              {
+                name: 'paragraph',
+                items: ['NumberedList', 'BulletedList']
+              },
+              {
+                name: 'links',
+                items: ['Link', 'Unlink']
+              },
+              {
+                name: 'insert',
+                items: ['EasyImageUpload']
+              }
+            ],
+            height: 630,
+            cloudServices_uploadUrl: 'https://33333.cke-cs.com/easyimage/upload/',
+            // Note: this is a token endpoint to be used for CKEditor 4 samples only. Images uploaded using this token may be deleted automatically at any moment.
+            // To create your own token URL please visit https://ckeditor.com/ckeditor-cloud-services/.
+            cloudServices_tokenUrl: 'https://33333.cke-cs.com/token/dev/ijrDsqFix838Gh3wGO3F77FSW94BwcLXprJ4APSp3XQ26xsUHTi0jcb1hoBt',
+            easyimage_styles: {
+              gradient1: {
+                group: 'easyimage-gradients',
+                attributes: {
+                  'class': 'easyimage-gradient-1'
+                },
+                label: 'Blue Gradient',
+                icon: 'https://ckeditor.com/docs/ckeditor4/4.14.0/examples/assets/easyimage/icons/gradient1.png',
+                iconHiDpi: 'https://ckeditor.com/docs/ckeditor4/4.14.0/examples/assets/easyimage/icons/hidpi/gradient1.png'
+              },
+              gradient2: {
+                group: 'easyimage-gradients',
+                attributes: {
+                  'class': 'easyimage-gradient-2'
+                },
+                label: 'Pink Gradient',
+                icon: 'https://ckeditor.com/docs/ckeditor4/4.14.0/examples/assets/easyimage/icons/gradient2.png',
+                iconHiDpi: 'https://ckeditor.com/docs/ckeditor4/4.14.0/examples/assets/easyimage/icons/hidpi/gradient2.png'
+              },
+              noGradient: {
+                group: 'easyimage-gradients',
+                attributes: {
+                  'class': 'easyimage-no-gradient'
+                },
+                label: 'No Gradient',
+                icon: 'https://ckeditor.com/docs/ckeditor4/4.14.0/examples/assets/easyimage/icons/nogradient.png',
+                iconHiDpi: 'https://ckeditor.com/docs/ckeditor4/4.14.0/examples/assets/easyimage/icons/hidpi/nogradient.png'
+              }
+            },
+            easyimage_toolbar: [
+              'EasyImageFull',
+              'EasyImageSide',
+              'EasyImageGradient1',
+              'EasyImageGradient2',
+              'EasyImageNoGradient',
+              'EasyImageAlt'
+            ]
+          });
+    }
   </script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
 
 <script>
 //Get the modal
