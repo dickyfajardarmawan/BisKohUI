@@ -9,6 +9,12 @@
 .btn {
 	font-weight: 500;
 }
+#footer {
+	margin-top: 80px;
+}
+#wrapper {
+    background-color: #fff;
+}
 </style>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
@@ -55,12 +61,12 @@
 					<tr>
 						<th scope="col">Nama FAQ</th>
 						<th scope="col">Status</th>
-						<th scope="col" colspan="4">Aksi</th>
+						<th scope="col" colspan="3">Aksi</th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody id="tableFaq">
 					<tr>
-						<th scope="row">FAQ 1</th>
+						<td scope="row">FAQ 1</td>
 						<td>Aktif</td>
 						<td><a href="javascript:void(0)" onclick="document.getElementById('id01').style.display='block'" data-toggle="tooltip" data-placement="top" title="Lihat Parameter FAQ"><i class="fa fa-eye"></i></a></td>
 						<td><a href="javascript:void(0)" onclick="document.getElementById('id02').style.display='block'" data-toggle="tooltip" data-placement="top" title="Atur Parameter FAQ"><i class="fa fa-cog"></i></a></td>
@@ -110,7 +116,7 @@
 					<div class="form-group row">
 						<label for="staticEmail" class="col-sm-2 col-form-label">Konten FAQ</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" disabled>
+							<textarea cols="80" id="editor0" name="editor0" class="editor" rows="10" data-sample-short disabled></textarea>
 						</div>
 					</div>
 					<div class="form-group row">
@@ -155,7 +161,7 @@
 					<div class="form-group row">
 						<label for="staticEmail" class="col-sm-2 col-form-label">Konten FAQ</label>
 						<div class="col-sm-10">
-							<textarea cols="80" id="editor0" name="editor0" class="editor" rows="10" data-sample-short></textarea>
+							<textarea cols="80" id="editor1" name="editor1" class="editor" rows="10" data-sample-short></textarea>
 						</div>
 					</div>
 					<div class="text-right mb-3">
@@ -215,20 +221,22 @@
 							<input type="text" class="form-control" required>
 						</div>
 					</div>
-					<div class="form-group row">
-						<label for="staticEmail" class="col-sm-2 col-form-label">Judul FAQ</label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" required>
+					<div id="idFaq">
+						<div class="form-group row">
+							<label for="staticEmail" class="col-sm-2 col-form-label">Judul FAQ</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" required>
+							</div>
 						</div>
-					</div>
-					<div class="form-group row">
-						<label for="staticEmail" class="col-sm-2 col-form-label">Konten FAQ</label>
-						<div class="col-sm-10">
-							<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample-short></textarea>
+						<div class="form-group row">
+							<label for="staticEmail" class="col-sm-2 col-form-label">Konten FAQ</label>
+							<div class="col-sm-10">
+								<textarea cols="80" id="editor2" name="editor2" class="editor" rows="10" data-sample-short></textarea>
+							</div>
 						</div>
 					</div>
 					<div class="text-right mb-3">
-						<button class="btn btn-danger">Tambah</button>
+						<button type="button" onclick="tambahFaq()" class="btn btn-danger">Tambah</button>
 					</div>
 					<div class="form-group row">
 						<label for="staticEmail" class="col-sm-2 col-form-label">Pilih Entitas</label>
@@ -243,14 +251,14 @@
 						</div>
 					</div>
 					<div class="text-right">
-						<button type="submit" class="btn btn-danger">Simpan</button>
+						<button type="button" onclick="simpanBtn()" class="btn btn-danger">Simpan</button>
 					</div>
 				</form>
 		</div>
 	</div>
 </div>
 
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
 
   <script>
     // Don't forget to add CSS for your custom styles.
@@ -259,8 +267,31 @@
       '.easyimage-gradient-1::before { background-image: linear-gradient( 135deg, rgba( 115, 110, 254, 0 ) 0%, rgba( 66, 174, 234, .72 ) 100% ); }' +
       '.easyimage-gradient-2::before { background-image: linear-gradient( 135deg, rgba( 115, 110, 254, 0 ) 0%, rgba( 228, 66, 234, .72 ) 100% ); }');
     
-    ckedit(0);
-    ckedit(1);
+    var idCkEdit = [0,1,2];
+    
+    var noIdCk = 2;
+    
+    loopCkEdit();
+    
+    function loopCkEdit() {
+    	var i
+    	for (i = 0; i < idCkEdit.length; i++) {
+    		ckedit(idCkEdit[i]);
+    	}
+    }
+    
+    function simpanBtn() {
+    	document.getElementById('id04').style.display='none';
+    	document.getElementById('tableFaq').innerHTML += `
+    		<tr>
+				<td scope="row">FAQ 1</td>
+				<td>Aktif</td>
+				<td><a href="javascript:void(0)" onclick="document.getElementById('id01').style.display='block'" data-toggle="tooltip" data-placement="top" title="Lihat Parameter FAQ"><i class="fa fa-eye"></i></a></td>
+				<td><a href="javascript:void(0)" onclick="document.getElementById('id02').style.display='block'" data-toggle="tooltip" data-placement="top" title="Atur Parameter FAQ"><i class="fa fa-cog"></i></a></td>
+				<td><a href="javascript:void(0)" onclick="document.getElementById('id03').style.display='block'" data-toggle="tooltip" data-placement="top" title="Hapus Parameter FAQ"><i class="fa fa-trash"></i></a></td>
+			</tr>
+    	`;
+    }
     
     function ckedit(i) {
     	CKEDITOR.replace('editor'+i, {
@@ -292,7 +323,7 @@
                 items: ['EasyImageUpload']
               }
             ],
-            height: 630,
+            height: 330,
             cloudServices_uploadUrl: 'https://33333.cke-cs.com/easyimage/upload/',
             // Note: this is a token endpoint to be used for CKEditor 4 samples only. Images uploaded using this token may be deleted automatically at any moment.
             // To create your own token URL please visit https://ckeditor.com/ckeditor-cloud-services/.
@@ -336,11 +367,54 @@
             ]
           });
     }
-  </script>
+    
+    var noTambahanFaq = 0;
+    
+    var dbTambahFaq = [];
+    
+    function tambahFaq() {
+    	console.log('sdffds');
+    	console.log('noIDCK', noIdCk);
+    	dbTambahFaq.push(noIdCk);
+    	var z;
+    	for (z = 0; z < dbTambahFaq.length; z++) {
+    		console.log('z', z);
+    		CKEDITOR.instances['editor'+dbTambahFaq[z]].destroy();
+    	}
+    	noIdCk += 1;
+    	console.log('noIDCK tambah 1', noIdCk);
+    	idCkEdit.push(noIdCk);
+    	noTambahanFaq++;
+    	document.getElementById('idFaq').innerHTML += `
+    		<div id="tambahanFaq` + noTambahanFaq +`">
+	    		<div class="form-group row">
+					<label for="staticEmail" class="col-sm-2 col-form-label">Judul FAQ</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" required>
+					</div>
+					<div class="col-sm-1">
+						<button type="button" onclick="hapusFaq(` + noTambahanFaq + `)" class="btn btn-light w-100"><i class="fa fa-trash-o"></i></button>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="staticEmail" class="col-sm-2 col-form-label">Konten FAQ</label>
+					<div class="col-sm-10">
+						<textarea cols="80" id="editor` + noIdCk +`" name="editor` + noIdCk +`" rows="10" data-sample-short></textarea>
+					</div>
+				</div>
+			</div>
+    	`;
+    	for(name in CKEDITOR.instances){
+    	    CKEDITOR.instances[name].destroy();
+    	}
+    	loopCkEdit();
+    }
+    
+function hapusFaq(noTambahFaq) {
+	console.log('noTambahFaq', noTambahFaq);
+	document.getElementById('tambahanFaq'+noTambahFaq).style.display = 'none';
+}
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
-
-<script>
 //Get the modal
 var modal = document.getElementById('id01');
 var modal2 = document.getElementById('id02');
@@ -359,6 +433,7 @@ window.onclick = function(event) {
 		modal3.style.display = "none";
 	}
 	if (event.target == modal4) {
+		console.log('zzzz');
 		modal4.style.display = "none";
 	}
 }
