@@ -1,0 +1,4 @@
+Bundle-Name: bk-penjualanmanual-ui
+Bundle-SymbolicName: bk.penjualanmanual.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.penjualanmanual.ui.constants
