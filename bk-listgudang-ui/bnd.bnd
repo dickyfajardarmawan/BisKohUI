@@ -1,0 +1,4 @@
+Bundle-Name: bk-listgudang-ui
+Bundle-SymbolicName: bk.listgudang.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.listgudang.ui.constants

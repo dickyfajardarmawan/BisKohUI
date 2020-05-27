@@ -1,0 +1,4 @@
+Bundle-Name: bk-tambahgudang-ui
+Bundle-SymbolicName: bk.tambahgudang.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.tambahgudang.ui.constants
