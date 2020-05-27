@@ -1,0 +1,4 @@
+Bundle-Name: bk-pengajuangudang-ui
+Bundle-SymbolicName: bk.pengajuangudang.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.pengajuangudang.ui.constants

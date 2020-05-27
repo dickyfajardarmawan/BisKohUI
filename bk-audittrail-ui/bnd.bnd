@@ -1,0 +1,4 @@
+Bundle-Name: bk-audittrail-ui
+Bundle-SymbolicName: bk.audittrail.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.audittrail.ui.constants
