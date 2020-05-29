@@ -1,0 +1,4 @@
+Bundle-Name: fl-listgudang-ui
+Bundle-SymbolicName: fl.listgudang.ui
+Bundle-Version: 1.0.0
+Export-Package: fl.listgudang.ui.constants
