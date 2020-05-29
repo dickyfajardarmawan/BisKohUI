@@ -1,0 +1,4 @@
+Bundle-Name: bk-parametermanual-ui
+Bundle-SymbolicName: bk.parametermanual.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.parametermanual.ui.constants

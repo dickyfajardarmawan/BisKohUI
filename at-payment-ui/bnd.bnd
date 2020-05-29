@@ -1,0 +1,4 @@
+Bundle-Name: at-payment-ui
+Bundle-SymbolicName: at.payment.ui
+Bundle-Version: 1.0.0
+Export-Package: at.payment.ui.constants
