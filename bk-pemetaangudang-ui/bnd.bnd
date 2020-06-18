@@ -1,0 +1,4 @@
+Bundle-Name: bk-pemetaangudang-ui
+Bundle-SymbolicName: bk.pemetaangudang.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.pemetaangudang.ui.constants

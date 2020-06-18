@@ -63,7 +63,7 @@
 						<th scope="col">Tipe Gudang</th>
 						<th scope="col">Kapasitas</th>
 						<th scope="col">Status</th>
-						<th scope="col" colspan="3">Aksi</th>
+						<th scope="col" colspan="5">Aksi</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -76,6 +76,21 @@
 						<td>Aktif</td>
 						<td><a href="javascript:void(0)" onclick="document.getElementById('id01').style.display='block';"><i class="fa fa-eye"></i></a></td>
 						<td><a href="javascript:void(0)" onclick="document.getElementById('id02').style.display='block';"><i class="fa fa-cogs"></i></a></td>
+						<td><a href="javascript:void(0)" onclick="document.getElementById('id03').style.display='block';"><i class="fa fa-trash"></i></a></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th scope="row">W01</th>
+						<td>Packing Plant A</td>
+						<td>Pt Mundur</td>
+						<td>Virtual</td>
+						<td>100 Ton</td>
+						<td>Aktif</td>
+						<td><a href="javascript:void(0)" onclick="document.getElementById('id01').style.display='block';"><i class="fa fa-eye"></i></a></td>
+						<td><a href="javascript:void(0)" onclick="document.getElementById('id02').style.display='block';"><i class="fa fa-cogs"></i></a></td>
+						<td><a href="javascript:void(0)" onclick="document.getElementById('id03').style.display='block';"><i class="fa fa-list"></i></a></td>
+						<td><a href="javascript:void(0)" onclick="document.getElementById('id03').style.display='block';"><i class="fa fa-users"></i></a></td>
 						<td><a href="javascript:void(0)" onclick="document.getElementById('id03').style.display='block';"><i class="fa fa-trash"></i></a></td>
 					</tr>
 				</tbody>

@@ -1,0 +1,4 @@
+Bundle-Name: bk-pemetaandistributorgudang-ui
+Bundle-SymbolicName: bk.pemetaandistributorgudang.ui
+Bundle-Version: 1.0.0
+Export-Package: bk.pemetaandistributorgudang.ui.constants
